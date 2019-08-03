@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.manage.dao">
+<select id="getAdmin" resultType="com.company.manage.dao.inter.Admin">
+       select * from admin where adminId = #{id}
+</select>
+<select id="Login"  parameterType="HashMap" resultType="com.company.manage.dao.inter.Admin">
+       select * from admin where adminName = #{name} and adminPassword = #{password}
+</select>
+</mapper>

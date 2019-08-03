@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.manage.dao.mapping.EmpMaping">
+<select id="findOne"  parameterType="HashMap" resultType="com.company.manage.dao.inter.Employee">
+       select * from employee where empName = #{username} and empPassword = #{password}
+</select>
+       <insert id="insertUser" parameterType="com.company.manage.dao.inter.Employee">
+              insert into employee(empName,empPassword,empNumber) values(#{empName},#{empPassword},#{empNumber})
+       </insert>
+</mapper>
